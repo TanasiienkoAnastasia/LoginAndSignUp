@@ -104,7 +104,7 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
                               <Component id="password" max="32767" attributes="0"/>
-                              <Component id="email" pref="187" max="32767" attributes="0"/>
+                              <Component id="emailAddress" pref="187" max="32767" attributes="0"/>
                               <Component id="jLabel1" min="-2" pref="113" max="-2" attributes="0"/>
                               <Component id="jLabel2" min="-2" pref="37" max="-2" attributes="0"/>
                               <Component id="fname" max="32767" attributes="0"/>
@@ -134,7 +134,7 @@
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="email" min="-2" pref="37" max="-2" attributes="0"/>
+                      <Component id="emailAddress" min="-2" pref="37" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
@@ -181,9 +181,9 @@
                 <Property name="text" type="java.lang.String" value="Full name"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="email">
+            <Component class="javax.swing.JTextField" name="emailAddress">
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="emailActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="emailAddressActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel4">

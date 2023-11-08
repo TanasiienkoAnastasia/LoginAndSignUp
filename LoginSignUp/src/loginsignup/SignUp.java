@@ -25,7 +25,7 @@ public class SignUp extends javax.swing.JFrame {
         fname = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        email = new javax.swing.JTextField();
+        emailAddress = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         password = new javax.swing.JPasswordField();
         SignUpBtn = new javax.swing.JButton();
@@ -71,9 +71,9 @@ public class SignUp extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel3.setText("Full name");
 
-        email.addActionListener(new java.awt.event.ActionListener() {
+        emailAddress.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                emailActionPerformed(evt);
+                emailAddressActionPerformed(evt);
             }
         });
 
@@ -115,7 +115,7 @@ public class SignUp extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(password)
-                        .addComponent(email, javax.swing.GroupLayout.DEFAULT_SIZE, 187, Short.MAX_VALUE)
+                        .addComponent(emailAddress, javax.swing.GroupLayout.DEFAULT_SIZE, 187, Short.MAX_VALUE)
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(fname)
@@ -140,7 +140,7 @@ public class SignUp extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(email, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(emailAddress, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -179,9 +179,9 @@ public class SignUp extends javax.swing.JFrame {
 
     }//GEN-LAST:event_fnameActionPerformed
 
-    private void emailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailActionPerformed
+    private void emailAddressActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailAddressActionPerformed
         
-    }//GEN-LAST:event_emailActionPerformed
+    }//GEN-LAST:event_emailAddressActionPerformed
 
     private void passwordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordActionPerformed
        
@@ -201,6 +201,10 @@ public class SignUp extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(new JFrame(), "Full Name is require", "Error",
                         JOptionPane.ERROR_MESSAGE);
             }
+            else if("".equals(emailAddress.getText())){
+                JOptionPane.showMessageDialog(new JFrame(), "Email Address is require", "Error",
+                        JOptionPane.ERROR_MESSAGE);
+            }
         }catch(Exception e){
             System.out.println("Error!" + e.getMessage());
         }
@@ -216,7 +220,7 @@ public class SignUp extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton SignUpBtn;
-    private javax.swing.JTextField email;
+    private javax.swing.JTextField emailAddress;
     private javax.swing.JTextField fname;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
