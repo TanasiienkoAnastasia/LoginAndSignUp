@@ -1,4 +1,11 @@
 package loginsignup;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+
 
 public class SignUp extends javax.swing.JFrame {
 
@@ -15,13 +22,13 @@ public class SignUp extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        fname = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        email = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        jPasswordField1 = new javax.swing.JPasswordField();
-        jButton1 = new javax.swing.JButton();
+        password = new javax.swing.JPasswordField();
+        SignUpBtn = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
 
@@ -52,9 +59,9 @@ public class SignUp extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel1.setText("Sign Up");
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        fname.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                fnameActionPerformed(evt);
             }
         });
 
@@ -64,27 +71,27 @@ public class SignUp extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel3.setText("Full name");
 
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        email.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                emailActionPerformed(evt);
             }
         });
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel4.setText("Parol");
+        jLabel4.setText("Password");
 
-        jPasswordField1.addActionListener(new java.awt.event.ActionListener() {
+        password.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jPasswordField1ActionPerformed(evt);
+                passwordActionPerformed(evt);
             }
         });
 
-        jButton1.setBackground(new java.awt.Color(204, 255, 51));
-        jButton1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jButton1.setText("SignUp");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        SignUpBtn.setBackground(new java.awt.Color(204, 255, 51));
+        SignUpBtn.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        SignUpBtn.setText("SignUp");
+        SignUpBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                SignUpBtnActionPerformed(evt);
             }
         });
 
@@ -107,14 +114,14 @@ public class SignUp extends javax.swing.JFrame {
                 .addGap(23, 23, 23)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jPasswordField1)
-                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jTextField2, javax.swing.GroupLayout.DEFAULT_SIZE, 187, Short.MAX_VALUE)
+                        .addComponent(password)
+                        .addComponent(email, javax.swing.GroupLayout.DEFAULT_SIZE, 187, Short.MAX_VALUE)
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jTextField1)
+                        .addComponent(fname)
                         .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(SignUpBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
@@ -129,17 +136,17 @@ public class SignUp extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(fname, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(email, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(password, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(SignUpBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 59, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
@@ -168,21 +175,36 @@ public class SignUp extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void fnameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fnameActionPerformed
 
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_fnameActionPerformed
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void emailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailActionPerformed
         
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_emailActionPerformed
 
-    private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed
+    private void passwordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordActionPerformed
        
-    }//GEN-LAST:event_jPasswordField1ActionPerformed
+    }//GEN-LAST:event_passwordActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void SignUpBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SignUpBtnActionPerformed
+        String fullName, email, Password;
+        String SUrl, SUser, SPass;
+        SUrl = "jdbc:MySQL://localhost:3306/java_user_database";
+        SUser = "root";
+        SPass = "";
+        try{
+            Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
+            Connection con = DriverManager.getConnection(SUrl, SUser, SPass);
+            Statement st = con.createStatement();
+            if("".equals(fname.getText())){
+                JOptionPane.showMessageDialog(new JFrame(), "Full Name is require", "Error",
+                        JOptionPane.ERROR_MESSAGE);
+            }
+        }catch(Exception e){
+            System.out.println("Error!" + e.getMessage());
+        }
+    }//GEN-LAST:event_SignUpBtnActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
        Login LoginFrame = new Login();
@@ -193,7 +215,9 @@ public class SignUp extends javax.swing.JFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton SignUpBtn;
+    private javax.swing.JTextField email;
+    private javax.swing.JTextField fname;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -202,10 +226,8 @@ public class SignUp extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
+    private javax.swing.JPasswordField password;
     // End of variables declaration//GEN-END:variables
 }
