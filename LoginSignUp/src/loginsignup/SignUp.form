@@ -103,7 +103,7 @@
                       <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="password" max="32767" attributes="0"/>
+                              <Component id="pass" max="32767" attributes="0"/>
                               <Component id="emailAddress" pref="187" max="32767" attributes="0"/>
                               <Component id="jLabel1" min="-2" pref="113" max="-2" attributes="0"/>
                               <Component id="jLabel2" min="-2" pref="37" max="-2" attributes="0"/>
@@ -138,7 +138,7 @@
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="password" min="-2" pref="33" max="-2" attributes="0"/>
+                      <Component id="pass" min="-2" pref="33" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                       <Component id="SignUpBtn" min="-2" pref="36" max="-2" attributes="0"/>
                       <EmptySpace pref="59" max="32767" attributes="0"/>
@@ -194,9 +194,9 @@
                 <Property name="text" type="java.lang.String" value="Password"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JPasswordField" name="password">
+            <Component class="javax.swing.JPasswordField" name="pass">
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="passwordActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="passActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JButton" name="SignUpBtn">
