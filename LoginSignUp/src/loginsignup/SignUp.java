@@ -5,6 +5,7 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
+import static javax.swing.JOptionPane.showMessageDialog;
 
 
 public class SignUp extends javax.swing.JFrame {
@@ -188,7 +189,7 @@ public class SignUp extends javax.swing.JFrame {
     }//GEN-LAST:event_passActionPerformed
 
     private void SignUpBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SignUpBtnActionPerformed
-        String fullName, email, Password;
+        String fullName, email, Password, query;
         String SUrl, SUser, SPass;
         SUrl = "jdbc:MySQL://localhost:3306/java_user_database";
         SUser = "root";
@@ -208,12 +209,22 @@ public class SignUp extends javax.swing.JFrame {
             else if("".equals(pass.getText())){
                 JOptionPane.showMessageDialog(new JFrame(), "Password is require", "Error",
                         JOptionPane.ERROR_MESSAGE);
-            }
+            } 
+            else {
             fullName = fname.getText(); 
             email    = emailAddress.getText();
             Password = pass.getText();
             System.out.println(Password);
             
+            query = "INSERT INTO user(full_name, email, password)"+
+                    "VALUES('"+fullName+"', '"+email+"' , '"+Password+"')";
+            
+            st.execute(query);
+            fname.setText("");
+            emailAddress.setText("");
+            pass.setText("");
+            showMessageDialog(null, "New account has been created successfully!");
+            }
         }catch(Exception e){
             System.out.println("Error!" + e.getMessage());
         }
