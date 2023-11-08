@@ -163,11 +163,12 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_emailActionPerformed
 
     private void LoginBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginBtnActionPerformed
-        String Email, Password, query;
+        String Email, Password, query, fname = null, passDb = null;
         String SUrl, SUser, SPass;
         SUrl = "jdbc:MySQL://localhost:3306/java_user_database";
         SUser = "root";
         SPass = "";
+        int notFound = 0;
         try{
             Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
             Connection con = DriverManager.getConnection(SUrl, SUser, SPass);
@@ -183,7 +184,22 @@ public class Login extends javax.swing.JFrame {
             else {
             Email    = email.getText();
             Password = password.getText();
-            System.out.println(Password);
+            
+            query = "SELECT * FROM user WHERE email= '"+Email+"'";
+       
+            ResultSet rs = st.executeQuery(query);
+            while(rs.next()){
+                passDb = rs.getString("password");
+                fname = rs.getString("full_name");
+                notFound = 1;
+            }
+            if(notFound == 1 && Password.equals(passDb)){
+                
+            }else{
+               JOptionPane.showMessageDialog(new JFrame(), "Incorrect email or password", "Error",
+                        JOptionPane.ERROR_MESSAGE);
+            }
+            password.setText("");
             
             }
         }catch(Exception e){
