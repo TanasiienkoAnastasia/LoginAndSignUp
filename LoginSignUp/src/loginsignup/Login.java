@@ -194,7 +194,11 @@ public class Login extends javax.swing.JFrame {
                 notFound = 1;
             }
             if(notFound == 1 && Password.equals(passDb)){
-               System.out.println("Okey");
+                Home HomeFrame = new Home();
+                HomeFrame.setVisible(true);
+                HomeFrame.pack();
+                HomeFrame.setLocationRelativeTo(null); 
+                this.dispose();
             }else{
                JOptionPane.showMessageDialog(new JFrame(), "Incorrect email or password", "Error",
                         JOptionPane.ERROR_MESSAGE);
