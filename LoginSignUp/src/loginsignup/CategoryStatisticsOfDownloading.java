@@ -14,7 +14,7 @@ public class CategoryStatisticsOfDownloading extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        ComeBack = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -24,12 +24,12 @@ public class CategoryStatisticsOfDownloading extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(0, 102, 102));
         jLabel1.setText("Category statistic of downloading ....");
 
-        jButton1.setBackground(new java.awt.Color(204, 255, 204));
-        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton1.setText("Come back to home page ....");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        ComeBack.setBackground(new java.awt.Color(204, 255, 204));
+        ComeBack.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ComeBack.setText("Come back to home page ....");
+        ComeBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                ComeBackActionPerformed(evt);
             }
         });
 
@@ -40,7 +40,7 @@ public class CategoryStatisticsOfDownloading extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(62, 62, 62)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton1)
+                    .addComponent(ComeBack)
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 421, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(197, Short.MAX_VALUE))
         );
@@ -50,7 +50,7 @@ public class CategoryStatisticsOfDownloading extends javax.swing.JFrame {
                 .addGap(27, 27, 27)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 383, Short.MAX_VALUE)
-                .addComponent(jButton1)
+                .addComponent(ComeBack)
                 .addGap(61, 61, 61))
         );
 
@@ -68,9 +68,9 @@ public class CategoryStatisticsOfDownloading extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void ComeBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ComeBackActionPerformed
+       
+    }//GEN-LAST:event_ComeBackActionPerformed
 
     
     public static void main(String args[]) {
@@ -84,7 +84,7 @@ public class CategoryStatisticsOfDownloading extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton ComeBack;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
