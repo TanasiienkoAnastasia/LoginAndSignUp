@@ -195,6 +195,7 @@ public class Login extends javax.swing.JFrame {
             }
             if(notFound == 1 && Password.equals(passDb)){
                 Home HomeFrame = new Home();
+                HomeFrame.setUser(fname);
                 HomeFrame.setVisible(true);
                 HomeFrame.pack();
                 HomeFrame.setLocationRelativeTo(null); 
