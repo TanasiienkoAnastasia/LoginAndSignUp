@@ -17,6 +17,7 @@ public class CategoryStatisticsOfDownloading extends javax.swing.JFrame {
         ComeBack = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("CategoryStatistics");
 
         jPanel1.setBackground(new java.awt.Color(255, 204, 204));
 

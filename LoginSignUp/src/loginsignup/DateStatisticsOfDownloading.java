@@ -18,6 +18,7 @@ public class DateStatisticsOfDownloading extends javax.swing.JFrame {
         ComeBack = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("DateStatistics");
 
         jPanel1.setBackground(new java.awt.Color(255, 204, 204));
 
@@ -65,6 +66,8 @@ public class DateStatisticsOfDownloading extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
+
+        getAccessibleContext().setAccessibleDescription("DateStatistics");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
