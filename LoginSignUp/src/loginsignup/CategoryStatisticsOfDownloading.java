@@ -101,15 +101,7 @@ public class CategoryStatisticsOfDownloading extends javax.swing.JFrame {
     }//GEN-LAST:event_LogOutBtnActionPerformed
 
     
-    public static void main(String args[]) {
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new CategoryStatisticsOfDownloading().setVisible(true);
-            }
-        });
-    }
+ 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton ComeBack;
