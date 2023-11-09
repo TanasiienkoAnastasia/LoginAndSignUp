@@ -95,6 +95,7 @@ public class HistoryOfDownloading extends javax.swing.JFrame {
        LoginFrame.setVisible(true);
        LoginFrame.pack();
        LoginFrame.setLocationRelativeTo(null);
+       this.dispose();
     }//GEN-LAST:event_LogOutBtnActionPerformed
 
     public static void main(String args[]) {

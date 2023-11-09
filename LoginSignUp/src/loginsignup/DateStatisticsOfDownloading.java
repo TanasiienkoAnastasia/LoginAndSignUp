@@ -98,6 +98,7 @@ public class DateStatisticsOfDownloading extends javax.swing.JFrame {
        LoginFrame.setVisible(true);
        LoginFrame.pack();
        LoginFrame.setLocationRelativeTo(null);
+       this.dispose();
     }//GEN-LAST:event_LogOutBtnActionPerformed
 
    
