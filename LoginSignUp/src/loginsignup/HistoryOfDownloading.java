@@ -66,6 +66,8 @@ public class HistoryOfDownloading extends javax.swing.JFrame {
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
+        getAccessibleContext().setAccessibleDescription("HistoryOfDownl;oading");
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 

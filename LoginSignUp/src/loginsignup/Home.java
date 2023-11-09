@@ -210,11 +210,15 @@ public class Home extends javax.swing.JFrame {
     }//GEN-LAST:event_HistoryOfDownloadingActionPerformed
 
     private void CategoryStatisticsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CategoryStatisticsActionPerformed
-        // TODO add your handling code here:
+                
     }//GEN-LAST:event_CategoryStatisticsActionPerformed
 
     private void DateStatisticsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DateStatisticsActionPerformed
-        // TODO add your handling code here:
+                DateStatisticOfDownloading DateStatisticOfDownloadingFrame = new DateStatisticOfDownloading();
+                DateStatisticOfDownloadingFrame.setVisible(true);
+                DateStatisticOfDownloadingFrame.pack();
+                DateStatisticOfDownloadingFrame.setLocationRelativeTo(null); 
+                this.dispose();
     }//GEN-LAST:event_DateStatisticsActionPerformed
 
     private void UsersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UsersActionPerformed
