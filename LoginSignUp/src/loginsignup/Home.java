@@ -96,6 +96,11 @@ public class Home extends javax.swing.JFrame {
         NewDownloading.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         NewDownloading.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         NewDownloading.setLabel("Start new downloading .....");
+        NewDownloading.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NewDownloadingActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -146,9 +151,9 @@ public class Home extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(User, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(DateStatistics, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(DateStatistics, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, 65, Short.MAX_VALUE)
@@ -209,6 +214,14 @@ public class Home extends javax.swing.JFrame {
                 UserFrame.setLocationRelativeTo(null); 
                 this.dispose();
     }//GEN-LAST:event_UserActionPerformed
+
+    private void NewDownloadingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NewDownloadingActionPerformed
+        DownloadManager DownloadManagerFrame = new DownloadManager();
+        DownloadManagerFrame.setVisible(true);
+        DownloadManagerFrame.pack();
+        DownloadManagerFrame.setLocationRelativeTo(null); 
+        this.dispose();
+    }//GEN-LAST:event_NewDownloadingActionPerformed
 
     
 
