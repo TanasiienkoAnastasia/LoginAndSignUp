@@ -12,7 +12,7 @@ public class HistoryOfDownloading extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        ComeBack = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("HistoryOfDownl;oading");
@@ -23,12 +23,12 @@ public class HistoryOfDownloading extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(0, 102, 51));
         jLabel1.setText("History of downloading ......");
 
-        jButton1.setBackground(new java.awt.Color(204, 255, 204));
-        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton1.setText("Come back to home page ....");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        ComeBack.setBackground(new java.awt.Color(204, 255, 204));
+        ComeBack.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        ComeBack.setText("Come back to home page ....");
+        ComeBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                ComeBackActionPerformed(evt);
             }
         });
 
@@ -40,7 +40,7 @@ public class HistoryOfDownloading extends javax.swing.JFrame {
                 .addGap(43, 43, 43)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel1)
-                    .addComponent(jButton1))
+                    .addComponent(ComeBack))
                 .addContainerGap(323, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -49,7 +49,7 @@ public class HistoryOfDownloading extends javax.swing.JFrame {
                 .addGap(25, 25, 25)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 410, Short.MAX_VALUE)
-                .addComponent(jButton1)
+                .addComponent(ComeBack)
                 .addGap(36, 36, 36))
         );
 
@@ -69,9 +69,13 @@ public class HistoryOfDownloading extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void ComeBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ComeBackActionPerformed
+        Home HomeFrame = new Home();
+        HomeFrame.setVisible(true);
+        HomeFrame.pack();
+        HomeFrame.setLocationRelativeTo(null); 
+        this.dispose();
+    }//GEN-LAST:event_ComeBackActionPerformed
 
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -82,7 +86,7 @@ public class HistoryOfDownloading extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton ComeBack;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
