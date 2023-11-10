@@ -1,6 +1,6 @@
 package loginsignup;
 
-import CommandLogin.Login;
+import Login.Login;
 
 public class LoginSignUp {
 
