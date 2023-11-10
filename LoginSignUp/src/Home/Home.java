@@ -2,10 +2,9 @@ package Home;
 
 import HistoryOfDownloadings.HistoryOfDownloading;
 import DownloadManager.DownloadManager;
-import DateStatisticsOfDownloading.DateStatisticsOfDownloading;
-import CategogoryStatisticsOfDownloading.CategoryStatisticsOfDownloading;
+import StatisticsOfDownloading.StatisticsOfDownloading;
 import Login.Login;
-import User.User;
+import UserPage.UserPage;
 
 
 public class Home extends javax.swing.JFrame {
@@ -25,10 +24,8 @@ public class Home extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        CategoryStatistics = new javax.swing.JButton();
         DateStatistics = new javax.swing.JButton();
         HistoryOfDownloading = new javax.swing.JButton();
-        jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         User = new javax.swing.JButton();
@@ -44,19 +41,9 @@ public class Home extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(255, 204, 204));
         jPanel1.setPreferredSize(new java.awt.Dimension(680, 530));
 
-        CategoryStatistics.setBackground(new java.awt.Color(153, 255, 153));
-        CategoryStatistics.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        CategoryStatistics.setText("View category statistics .......");
-        CategoryStatistics.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        CategoryStatistics.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CategoryStatisticsActionPerformed(evt);
-            }
-        });
-
         DateStatistics.setBackground(new java.awt.Color(153, 255, 153));
         DateStatistics.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        DateStatistics.setText("View date statistics .......");
+        DateStatistics.setText("View statistics of downloading.......");
         DateStatistics.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         DateStatistics.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -73,8 +60,6 @@ public class Home extends javax.swing.JFrame {
                 HistoryOfDownloadingActionPerformed(evt);
             }
         });
-
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/2.png"))); // NOI18N
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/3.png"))); // NOI18N
         jLabel5.setText("jLabel5");
@@ -129,7 +114,6 @@ public class Home extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(DateStatistics, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(CategoryStatistics, javax.swing.GroupLayout.DEFAULT_SIZE, 236, Short.MAX_VALUE)
                             .addComponent(User, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(HistoryOfDownloading, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -138,7 +122,6 @@ public class Home extends javax.swing.JFrame {
                                 .addComponent(jLabel7)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(NewDownloading, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jLabel4)
                             .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -164,15 +147,11 @@ public class Home extends javax.swing.JFrame {
                     .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(CategoryStatistics, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(HistoryOfDownloading, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(29, 29, 29)
+                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(HistoryOfDownloading, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(76, 76, 76)
                 .addComponent(LogOutBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 79, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 107, Short.MAX_VALUE)
                 .addComponent(jLabel2)
                 .addGap(18, 18, 18))
         );
@@ -201,16 +180,8 @@ public class Home extends javax.swing.JFrame {
                 this.dispose();
     }//GEN-LAST:event_HistoryOfDownloadingActionPerformed
 
-    private void CategoryStatisticsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CategoryStatisticsActionPerformed
-                CategoryStatisticsOfDownloading CategoryStatisticsOfDownloadingFrame = new CategoryStatisticsOfDownloading();
-                CategoryStatisticsOfDownloadingFrame.setVisible(true);
-                CategoryStatisticsOfDownloadingFrame.pack();
-                CategoryStatisticsOfDownloadingFrame.setLocationRelativeTo(null); 
-                this.dispose();
-    }//GEN-LAST:event_CategoryStatisticsActionPerformed
-
     private void DateStatisticsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DateStatisticsActionPerformed
-                DateStatisticsOfDownloading DateStatisticsOfDownloadingFrame = new DateStatisticsOfDownloading();
+                StatisticsOfDownloading DateStatisticsOfDownloadingFrame = new StatisticsOfDownloading();
                 DateStatisticsOfDownloadingFrame.setVisible(true);
                 DateStatisticsOfDownloadingFrame.pack();
                 DateStatisticsOfDownloadingFrame.setLocationRelativeTo(null); 
@@ -218,7 +189,7 @@ public class Home extends javax.swing.JFrame {
     }//GEN-LAST:event_DateStatisticsActionPerformed
 
     private void UserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UserActionPerformed
-                User UserFrame = new User();
+                UserPage UserFrame = new UserPage();
                 UserFrame.setVisible(true);
                 UserFrame.pack();
                 UserFrame.setLocationRelativeTo(null); 
@@ -244,14 +215,12 @@ public class Home extends javax.swing.JFrame {
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton CategoryStatistics;
     private javax.swing.JButton DateStatistics;
     private javax.swing.JButton HistoryOfDownloading;
     private javax.swing.JButton LogOutBtn;
     private java.awt.Button NewDownloading;
     private javax.swing.JButton User;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
