@@ -3,6 +3,7 @@ package Home;
 import HistoryOfDownloadings.HistoryOfDownloading;
 import DownloadManager.DownloadManager;
 import GeneralCommands.CommandLogOut;
+import Home.Commands.CommandSwitchToStartDownloadingPage;
 import StatisticsOfDownloading.StatisticsOfDownloading;
 import Login.Login;
 import UserPage.UserPage;
@@ -198,10 +199,8 @@ public class Home extends javax.swing.JFrame {
     }//GEN-LAST:event_UserActionPerformed
 
     private void NewDownloadingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NewDownloadingActionPerformed
-                DownloadManager DownloadManagerFrame = new DownloadManager();
-                DownloadManagerFrame.setVisible(true);
-                DownloadManagerFrame.pack();
-                DownloadManagerFrame.setLocationRelativeTo(null); 
+                CommandSwitchToStartDownloadingPage switchToStartDownloadingPage = new CommandSwitchToStartDownloadingPage();
+                switchToStartDownloadingPage.switchToStartDownloadingPage();
                 this.dispose();
     }//GEN-LAST:event_NewDownloadingActionPerformed
 
