@@ -5,6 +5,7 @@ import DownloadManager.DownloadManager;
 import GeneralCommands.CommandLogOut;
 import Home.Commands.CommandSwitchToStartDownloadingPage;
 import Home.Commands.CommandSwitchToStatisticsOfDownloading;
+import Home.Commands.CommandViewHistoryOfDownloadings;
 import StatisticsOfDownloading.StatisticsOfDownloading;
 import Login.Login;
 import UserPage.UserPage;
@@ -176,10 +177,8 @@ public class Home extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void HistoryOfDownloadingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HistoryOfDownloadingActionPerformed
-                HistoryOfDownloading HistoryOfDownloadingFrame = new HistoryOfDownloading();
-                HistoryOfDownloadingFrame.setVisible(true);
-                HistoryOfDownloadingFrame.pack();
-                HistoryOfDownloadingFrame.setLocationRelativeTo(null); 
+                CommandViewHistoryOfDownloadings commandViewHistoryOfDownloadings = new CommandViewHistoryOfDownloadings();
+                commandViewHistoryOfDownloadings.viewHidtoryOfDownloadings();
                 this.dispose();
     }//GEN-LAST:event_HistoryOfDownloadingActionPerformed
 
