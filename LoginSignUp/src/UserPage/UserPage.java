@@ -1,5 +1,6 @@
 package UserPage;
 
+import GeneralCommands.CommandComeBackHome;
 import GeneralCommands.CommandLogOut;
 import Login.Login;
 import Home.Home;
@@ -196,10 +197,8 @@ public class UserPage extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void ComeBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ComeBackActionPerformed
-        Home HomeFrame = new Home();
-        HomeFrame.setVisible(true);
-        HomeFrame.pack();
-        HomeFrame.setLocationRelativeTo(null); 
+        CommandComeBackHome comeBackHome = new CommandComeBackHome();
+        comeBackHome.comeBackHome();
         this.dispose();
     }//GEN-LAST:event_ComeBackActionPerformed
 
