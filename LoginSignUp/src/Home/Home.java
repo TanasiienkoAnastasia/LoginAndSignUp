@@ -5,6 +5,7 @@ import DownloadManager.DownloadManager;
 import GeneralCommands.CommandLogOut;
 import Home.Commands.CommandSwitchToStartDownloadingPage;
 import Home.Commands.CommandSwitchToStatisticsOfDownloading;
+import Home.Commands.CommandSwitchToUserPage;
 import Home.Commands.CommandViewHistoryOfDownloadings;
 import StatisticsOfDownloading.StatisticsOfDownloading;
 import Login.Login;
@@ -189,10 +190,8 @@ public class Home extends javax.swing.JFrame {
     }//GEN-LAST:event_DateStatisticsActionPerformed
 
     private void UserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UserActionPerformed
-                UserPage UserFrame = new UserPage();
-                UserFrame.setVisible(true);
-                UserFrame.pack();
-                UserFrame.setLocationRelativeTo(null); 
+                CommandSwitchToUserPage commandSwitchToUserPage = new CommandSwitchToUserPage();
+                commandSwitchToUserPage.commandSwitchToUserPage();
                 this.dispose();
     }//GEN-LAST:event_UserActionPerformed
 
@@ -203,9 +202,9 @@ public class Home extends javax.swing.JFrame {
     }//GEN-LAST:event_NewDownloadingActionPerformed
 
     private void LogOutBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LogOutBtnActionPerformed
-       CommandLogOut logOut = new CommandLogOut();
-       logOut.logOut();
-       this.dispose();
+                CommandLogOut logOut = new CommandLogOut();
+                logOut.logOut();
+                this.dispose();
     }//GEN-LAST:event_LogOutBtnActionPerformed
 
     
