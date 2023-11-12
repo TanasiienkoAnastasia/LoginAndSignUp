@@ -1,5 +1,6 @@
 package HistoryOfDownloadings;
 
+import GeneralCommands.CommandLogOut;
 import Home.Home;
 import Login.Login;
 
@@ -94,10 +95,8 @@ public class HistoryOfDownloading extends javax.swing.JFrame {
     }//GEN-LAST:event_ComeBackActionPerformed
 
     private void LogOutBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LogOutBtnActionPerformed
-       Login LoginFrame = new Login();
-       LoginFrame.setVisible(true);
-       LoginFrame.pack();
-       LoginFrame.setLocationRelativeTo(null);
+       CommandLogOut logOut = new CommandLogOut();
+       logOut.logOut();
        this.dispose();
     }//GEN-LAST:event_LogOutBtnActionPerformed
 
