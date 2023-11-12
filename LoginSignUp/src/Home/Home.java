@@ -2,6 +2,7 @@ package Home;
 
 import HistoryOfDownloadings.HistoryOfDownloading;
 import DownloadManager.DownloadManager;
+import GeneralCommands.CommandLogOut;
 import StatisticsOfDownloading.StatisticsOfDownloading;
 import Login.Login;
 import UserPage.UserPage;
@@ -205,10 +206,8 @@ public class Home extends javax.swing.JFrame {
     }//GEN-LAST:event_NewDownloadingActionPerformed
 
     private void LogOutBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LogOutBtnActionPerformed
-       Login LoginFrame = new Login();
-       LoginFrame.setVisible(true);
-       LoginFrame.pack();
-       LoginFrame.setLocationRelativeTo(null);
+       CommandLogOut logOut = new CommandLogOut();
+       logOut.logOut();
        this.dispose();
     }//GEN-LAST:event_LogOutBtnActionPerformed
 
