@@ -1,5 +1,6 @@
 package StatisticsOfDownloading;
 
+import GeneralCommands.CommandComeBackHome;
 import GeneralCommands.CommandLogOut;
 import Home.Home;
 import Login.Login;
@@ -90,10 +91,8 @@ public class StatisticsOfDownloading extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void ComeBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ComeBackActionPerformed
-        Home HomeFrame = new Home();
-        HomeFrame.setVisible(true);
-        HomeFrame.pack();
-        HomeFrame.setLocationRelativeTo(null); 
+        CommandComeBackHome comeBackHome = new CommandComeBackHome();
+        comeBackHome.comeBackHome();
         this.dispose();
     }//GEN-LAST:event_ComeBackActionPerformed
 
