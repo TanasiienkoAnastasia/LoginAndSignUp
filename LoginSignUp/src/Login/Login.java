@@ -1,5 +1,6 @@
 package Login;
 import Home.Home;
+import Login.Commands.CommandSwitchToSignUpPage;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -28,7 +29,7 @@ public class Login extends javax.swing.JFrame {
         password = new javax.swing.JPasswordField();
         LoginBtn = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
+        SignUp = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -72,11 +73,11 @@ public class Login extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel4.setText("I don`t have an account....");
 
-        jButton2.setBackground(new java.awt.Color(153, 255, 204));
-        jButton2.setText("Sign Up");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        SignUp.setBackground(new java.awt.Color(153, 255, 204));
+        SignUp.setText("Sign Up");
+        SignUp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                SignUpActionPerformed(evt);
             }
         });
 
@@ -92,7 +93,7 @@ public class Login extends javax.swing.JFrame {
                         .addGap(33, 33, 33)
                         .addComponent(jLabel4)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton2))
+                        .addComponent(SignUp))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(25, 25, 25)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -125,7 +126,7 @@ public class Login extends javax.swing.JFrame {
                 .addGap(69, 69, 69)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel4)
-                    .addComponent(jButton2))
+                    .addComponent(SignUp))
                 .addContainerGap(27, Short.MAX_VALUE))
         );
 
@@ -218,19 +219,17 @@ public class Login extends javax.swing.JFrame {
       
     }//GEN-LAST:event_passwordActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-       SignUp SignUpFrame = new SignUp();
-       SignUpFrame.setVisible(true);
-       SignUpFrame.pack();
-       SignUpFrame.setLocationRelativeTo(null);
-    }//GEN-LAST:event_jButton2ActionPerformed
+    private void SignUpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SignUpActionPerformed
+       CommandSwitchToSignUpPage switchToSignUoPage = new CommandSwitchToSignUpPage();
+       switchToSignUoPage.switchToSignUpPage();
+    }//GEN-LAST:event_SignUpActionPerformed
 
   
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton LoginBtn;
+    private javax.swing.JButton SignUp;
     private javax.swing.JTextField email;
-    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

@@ -1,5 +1,5 @@
 package StatisticsOfDownloading.Commands;
 
-public class CommandShowStatisticOdDates {
+public class CommandShowStatisticOfDates {
     
 }
