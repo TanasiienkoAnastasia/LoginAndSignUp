@@ -7,6 +7,7 @@ import Home.Home;
 import Login.Login;
 import StatisticsOfDownloading.Commands.CommandShowStatisticsOfDates;
 import StatisticsOfDownloading.Commands.CommandShowStatisticsOfSites;
+import StatisticsOfDownloading.Commands.CommandShowStatisticsOfSpeed;
 
 
 public class StatisticsOfDownloading extends javax.swing.JFrame {
@@ -78,6 +79,11 @@ public class StatisticsOfDownloading extends javax.swing.JFrame {
         StatisticsOfSpeed.setBackground(new java.awt.Color(255, 255, 204));
         StatisticsOfSpeed.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         StatisticsOfSpeed.setText("Statistics of speed");
+        StatisticsOfSpeed.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                StatisticsOfSpeedActionPerformed(evt);
+            }
+        });
 
         StatisticsOfVolume.setBackground(new java.awt.Color(255, 255, 204));
         StatisticsOfVolume.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -158,6 +164,12 @@ public class StatisticsOfDownloading extends javax.swing.JFrame {
         commandShowStatisticsOfSites.commandShowStatisticsOfSites();
         this.dispose();
     }//GEN-LAST:event_StatisticsOfSitesActionPerformed
+
+    private void StatisticsOfSpeedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StatisticsOfSpeedActionPerformed
+        CommandShowStatisticsOfSpeed commandShowStatisticsOfSpeed = new CommandShowStatisticsOfSpeed();
+        commandShowStatisticsOfSpeed.commandShowStatisticsOfSpeed();
+        this.dispose();
+    }//GEN-LAST:event_StatisticsOfSpeedActionPerformed
 
    
     public static void main(String args[]) {
