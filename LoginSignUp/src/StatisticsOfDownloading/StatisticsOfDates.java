@@ -2,6 +2,7 @@ package StatisticsOfDownloading;
 
 import GeneralCommands.CommandComeBackHome;
 import GeneralCommands.CommandLogOut;
+import StatisticsOfDownloading.Commands.CommandComeBackToStatisticsHomePage;
 
 public class StatisticsOfDates extends javax.swing.JFrame {
 
@@ -19,7 +20,6 @@ public class StatisticsOfDates extends javax.swing.JFrame {
         LogOut = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(680, 530));
 
         jPanel1.setBackground(new java.awt.Color(255, 204, 204));
 
@@ -28,7 +28,7 @@ public class StatisticsOfDates extends javax.swing.JFrame {
 
         ComeBackHome.setBackground(new java.awt.Color(204, 255, 204));
         ComeBackHome.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        ComeBackHome.setText("Come back home ");
+        ComeBackHome.setText("Come back to statistic home page");
         ComeBackHome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ComeBackHomeActionPerformed(evt);
@@ -56,9 +56,9 @@ public class StatisticsOfDates extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(66, 66, 66)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(ComeBackHome, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(LogOut, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(337, Short.MAX_VALUE))
+                            .addComponent(LogOut, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(ComeBackHome, javax.swing.GroupLayout.PREFERRED_SIZE, 292, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(324, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -87,8 +87,8 @@ public class StatisticsOfDates extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void ComeBackHomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ComeBackHomeActionPerformed
-        CommandComeBackHome comeBackHome = new CommandComeBackHome();
-        comeBackHome.comeBackHome();
+        CommandComeBackToStatisticsHomePage comeBackHome = new CommandComeBackToStatisticsHomePage();
+        comeBackHome.comeBackToStatisticsHomePage();
         this.dispose();
     }//GEN-LAST:event_ComeBackHomeActionPerformed
 
