@@ -2,8 +2,7 @@ package DownloadManager;
 
 import GeneralCommands.CommandComeBackHome;
 import GeneralCommands.CommandLogOut;
-import Home.Home;
-import Login.Login;
+
 
 public class DownloadManager extends javax.swing.JFrame {
 
@@ -23,7 +22,7 @@ public class DownloadManager extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         ComeBack = new javax.swing.JButton();
         LogOutBtn = new javax.swing.JButton();
-        EditText = new javax.swing.JTextField();
+        DownloadURL = new javax.swing.JTextField();
         StartDownload = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
@@ -70,12 +69,12 @@ public class DownloadManager extends javax.swing.JFrame {
             }
         });
 
-        EditText.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        EditText.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        EditText.setText("Enter Download URL here ......");
-        EditText.addActionListener(new java.awt.event.ActionListener() {
+        DownloadURL.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        DownloadURL.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        DownloadURL.setText("Enter Download URL here ......");
+        DownloadURL.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                EditTextActionPerformed(evt);
+                DownloadURLActionPerformed(evt);
             }
         });
 
@@ -131,7 +130,7 @@ public class DownloadManager extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(26, 26, 26)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(EditText, javax.swing.GroupLayout.PREFERRED_SIZE, 638, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(DownloadURL, javax.swing.GroupLayout.PREFERRED_SIZE, 638, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(LogOutBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(ComeBack, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 419, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -144,7 +143,7 @@ public class DownloadManager extends javax.swing.JFrame {
                 .addGap(20, 20, 20)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(EditText, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(DownloadURL, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(StartDownload, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -184,16 +183,17 @@ public class DownloadManager extends javax.swing.JFrame {
        this.dispose();
     }//GEN-LAST:event_LogOutBtnActionPerformed
 
-    private void EditTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EditTextActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_EditTextActionPerformed
+    private void DownloadURLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DownloadURLActionPerformed
+        
+    }//GEN-LAST:event_DownloadURLActionPerformed
 
     private void jTable1PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jTable1PropertyChange
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_jTable1PropertyChange
 
     private void StartDownloadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StartDownloadActionPerformed
-        System.out.println("Button clicked");
+        String text = DownloadURL.getText();
+        System.out.println("Field text is =" + text);
     }//GEN-LAST:event_StartDownloadActionPerformed
 
   
@@ -225,7 +225,7 @@ public class DownloadManager extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton ComeBack;
-    private javax.swing.JTextField EditText;
+    private javax.swing.JTextField DownloadURL;
     private javax.swing.JButton LogOutBtn;
     private javax.swing.JButton StartDownload;
     private javax.swing.JLabel jLabel1;
