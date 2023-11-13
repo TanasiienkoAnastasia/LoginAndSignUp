@@ -1,6 +1,7 @@
 
 package StatisticsOfDownloading;
 
+import GeneralCommands.CommandComeBackHome;
 import GeneralCommands.CommandLogOut;
 
 
@@ -85,7 +86,9 @@ public class StatisticsOfSites extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void ComeBackHomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ComeBackHomeActionPerformed
-        // TODO add your handling code here:
+        CommandComeBackHome comeBackHome = new CommandComeBackHome();
+        comeBackHome.comeBackHome();
+        this.dispose();
     }//GEN-LAST:event_ComeBackHomeActionPerformed
 
     private void LogOutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LogOutActionPerformed

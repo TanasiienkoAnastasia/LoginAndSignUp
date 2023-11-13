@@ -1,5 +1,6 @@
 package StatisticsOfDownloading;
 
+import GeneralCommands.CommandComeBackHome;
 import GeneralCommands.CommandLogOut;
 
 
@@ -29,6 +30,11 @@ public class StatisticsOfVolume extends javax.swing.JFrame {
         ComeBackHome.setBackground(new java.awt.Color(204, 255, 204));
         ComeBackHome.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         ComeBackHome.setText("Come back home");
+        ComeBackHome.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ComeBackHomeActionPerformed(evt);
+            }
+        });
 
         LogOut.setBackground(new java.awt.Color(204, 204, 255));
         LogOut.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -82,6 +88,12 @@ public class StatisticsOfVolume extends javax.swing.JFrame {
        logOut.logOut();
        this.dispose();
     }//GEN-LAST:event_LogOutActionPerformed
+
+    private void ComeBackHomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ComeBackHomeActionPerformed
+        CommandComeBackHome comeBackHome = new CommandComeBackHome();
+        comeBackHome.comeBackHome();
+        this.dispose();
+    }//GEN-LAST:event_ComeBackHomeActionPerformed
 
    
    
