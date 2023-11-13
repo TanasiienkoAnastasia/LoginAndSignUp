@@ -176,6 +176,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Statistics of volume"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="StatisticsOfVolumeActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>

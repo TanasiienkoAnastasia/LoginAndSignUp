@@ -8,6 +8,7 @@ import Login.Login;
 import StatisticsOfDownloading.Commands.CommandShowStatisticsOfDates;
 import StatisticsOfDownloading.Commands.CommandShowStatisticsOfSites;
 import StatisticsOfDownloading.Commands.CommandShowStatisticsOfSpeed;
+import StatisticsOfDownloading.Commands.CommandShowStatisticsOfVolume;
 
 
 public class StatisticsOfDownloading extends javax.swing.JFrame {
@@ -88,6 +89,11 @@ public class StatisticsOfDownloading extends javax.swing.JFrame {
         StatisticsOfVolume.setBackground(new java.awt.Color(255, 255, 204));
         StatisticsOfVolume.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         StatisticsOfVolume.setText("Statistics of volume");
+        StatisticsOfVolume.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                StatisticsOfVolumeActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -170,6 +176,12 @@ public class StatisticsOfDownloading extends javax.swing.JFrame {
         commandShowStatisticsOfSpeed.commandShowStatisticsOfSpeed();
         this.dispose();
     }//GEN-LAST:event_StatisticsOfSpeedActionPerformed
+
+    private void StatisticsOfVolumeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StatisticsOfVolumeActionPerformed
+        CommandShowStatisticsOfVolume commandShowStatisticsOfVolume = new CommandShowStatisticsOfVolume();
+        commandShowStatisticsOfVolume.commandShowStatisticsOfVolume();
+        this.dispose();
+    }//GEN-LAST:event_StatisticsOfVolumeActionPerformed
 
    
     public static void main(String args[]) {
