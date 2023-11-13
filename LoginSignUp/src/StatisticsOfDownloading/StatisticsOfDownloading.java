@@ -6,6 +6,7 @@ import Home.Commands.CommandSwitchToUserPage;
 import Home.Home;
 import Login.Login;
 import StatisticsOfDownloading.Commands.CommandShowStatisticsOfDates;
+import StatisticsOfDownloading.Commands.CommandShowStatisticsOfSites;
 
 
 public class StatisticsOfDownloading extends javax.swing.JFrame {
@@ -68,6 +69,11 @@ public class StatisticsOfDownloading extends javax.swing.JFrame {
         StatisticsOfSites.setBackground(new java.awt.Color(255, 255, 204));
         StatisticsOfSites.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         StatisticsOfSites.setText("Statistics of sites");
+        StatisticsOfSites.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                StatisticsOfSitesActionPerformed(evt);
+            }
+        });
 
         StatisticsOfSpeed.setBackground(new java.awt.Color(255, 255, 204));
         StatisticsOfSpeed.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -146,6 +152,12 @@ public class StatisticsOfDownloading extends javax.swing.JFrame {
         commandShowStatisticsOfDates.commandShowStatisticsOfDates();
         this.dispose();
     }//GEN-LAST:event_StatisticsOfDatesActionPerformed
+
+    private void StatisticsOfSitesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StatisticsOfSitesActionPerformed
+        CommandShowStatisticsOfSites commandShowStatisticsOfSites = new CommandShowStatisticsOfSites();
+        commandShowStatisticsOfSites.commandShowStatisticsOfSites();
+        this.dispose();
+    }//GEN-LAST:event_StatisticsOfSitesActionPerformed
 
    
     public static void main(String args[]) {
