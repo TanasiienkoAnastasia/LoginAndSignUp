@@ -1,13 +1,13 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package StatisticsOfDownloading.Commands;
 
-/**
- *
- * @author ASUS
- */
+import StatisticsOfDownloading.StatisticsOfDownloading;
+
+
 public class CommandComeBackToStatisticsHomePage {
-    
+        public void comeBackToStatisticsHomePage(){
+        StatisticsOfDownloading StatisticsOfDownloadingFrame = new StatisticsOfDownloading();
+        StatisticsOfDownloadingFrame.setVisible(true);
+        StatisticsOfDownloadingFrame.pack();
+        StatisticsOfDownloadingFrame.setLocationRelativeTo(null);
+        }
 }

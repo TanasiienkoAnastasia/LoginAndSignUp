@@ -2,6 +2,7 @@ package StatisticsOfDownloading;
 
 import GeneralCommands.CommandComeBackHome;
 import GeneralCommands.CommandLogOut;
+import StatisticsOfDownloading.Commands.CommandComeBackToStatisticsHomePage;
 
 
 public class StatisticsOfVolume extends javax.swing.JFrame {
@@ -90,8 +91,8 @@ public class StatisticsOfVolume extends javax.swing.JFrame {
     }//GEN-LAST:event_LogOutActionPerformed
 
     private void ComeBackHomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ComeBackHomeActionPerformed
-        CommandComeBackHome comeBackHome = new CommandComeBackHome();
-        comeBackHome.comeBackHome();
+        CommandComeBackToStatisticsHomePage comeBackHome = new CommandComeBackToStatisticsHomePage();
+        comeBackHome.comeBackToStatisticsHomePage();
         this.dispose();
     }//GEN-LAST:event_ComeBackHomeActionPerformed
 
