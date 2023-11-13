@@ -46,7 +46,7 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="62" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="LogOut" min="-2" pref="106" max="-2" attributes="0"/>
+                      <Component id="LogOut" min="-2" pref="116" max="-2" attributes="0"/>
                       <Component id="ComeBackHome" min="-2" pref="194" max="-2" attributes="0"/>
                       <Component id="jLabel1" min="-2" pref="317" max="-2" attributes="0"/>
                   </Group>
@@ -101,6 +101,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Log out"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="LogOutActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>
