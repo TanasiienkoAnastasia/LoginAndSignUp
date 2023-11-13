@@ -2,8 +2,10 @@ package StatisticsOfDownloading;
 
 import GeneralCommands.CommandComeBackHome;
 import GeneralCommands.CommandLogOut;
+import Home.Commands.CommandSwitchToUserPage;
 import Home.Home;
 import Login.Login;
+import StatisticsOfDownloading.Commands.CommandShowStatisticsOfDates;
 
 
 public class StatisticsOfDownloading extends javax.swing.JFrame {
@@ -22,10 +24,10 @@ public class StatisticsOfDownloading extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         ComeBack = new javax.swing.JButton();
         LogOutBtn = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        StatisticsOfDates = new javax.swing.JButton();
+        StatisticsOfSites = new javax.swing.JButton();
+        StatisticsOfSpeed = new javax.swing.JButton();
+        StatisticsOfVolume = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("DateStatistics");
@@ -54,21 +56,26 @@ public class StatisticsOfDownloading extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setBackground(new java.awt.Color(255, 255, 204));
-        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton1.setText("Statistics of dates");
+        StatisticsOfDates.setBackground(new java.awt.Color(255, 255, 204));
+        StatisticsOfDates.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        StatisticsOfDates.setText("Statistics of dates");
+        StatisticsOfDates.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                StatisticsOfDatesActionPerformed(evt);
+            }
+        });
 
-        jButton2.setBackground(new java.awt.Color(255, 255, 204));
-        jButton2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton2.setText("Statistics of sites");
+        StatisticsOfSites.setBackground(new java.awt.Color(255, 255, 204));
+        StatisticsOfSites.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        StatisticsOfSites.setText("Statistics of sites");
 
-        jButton3.setBackground(new java.awt.Color(255, 255, 204));
-        jButton3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton3.setText("Statistics of speed");
+        StatisticsOfSpeed.setBackground(new java.awt.Color(255, 255, 204));
+        StatisticsOfSpeed.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        StatisticsOfSpeed.setText("Statistics of speed");
 
-        jButton4.setBackground(new java.awt.Color(255, 255, 204));
-        jButton4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton4.setText("Statistics of volume");
+        StatisticsOfVolume.setBackground(new java.awt.Color(255, 255, 204));
+        StatisticsOfVolume.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        StatisticsOfVolume.setText("Statistics of volume");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -77,14 +84,13 @@ public class StatisticsOfDownloading extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(53, 53, 53)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, 478, Short.MAX_VALUE)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, 478, Short.MAX_VALUE)
-                        .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(LogOutBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(ComeBack)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 384, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(StatisticsOfVolume, javax.swing.GroupLayout.DEFAULT_SIZE, 478, Short.MAX_VALUE)
+                    .addComponent(StatisticsOfSpeed, javax.swing.GroupLayout.DEFAULT_SIZE, 478, Short.MAX_VALUE)
+                    .addComponent(StatisticsOfSites, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(StatisticsOfDates, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(LogOutBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ComeBack)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 384, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(149, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -93,13 +99,13 @@ public class StatisticsOfDownloading extends javax.swing.JFrame {
                 .addGap(27, 27, 27)
                 .addComponent(jLabel1)
                 .addGap(18, 18, 18)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(StatisticsOfDates, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(34, 34, 34)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(StatisticsOfSites, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(32, 32, 32)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(StatisticsOfSpeed, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(34, 34, 34)
-                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(StatisticsOfVolume, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 98, Short.MAX_VALUE)
                 .addComponent(ComeBack)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -135,6 +141,12 @@ public class StatisticsOfDownloading extends javax.swing.JFrame {
        this.dispose();
     }//GEN-LAST:event_LogOutBtnActionPerformed
 
+    private void StatisticsOfDatesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StatisticsOfDatesActionPerformed
+        CommandShowStatisticsOfDates commandShowStatisticsOfDates = new CommandShowStatisticsOfDates();
+        commandShowStatisticsOfDates.commandShowStatisticsOfDates();
+        this.dispose();
+    }//GEN-LAST:event_StatisticsOfDatesActionPerformed
+
    
     public static void main(String args[]) {
         
@@ -149,10 +161,10 @@ public class StatisticsOfDownloading extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton ComeBack;
     private javax.swing.JButton LogOutBtn;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
+    private javax.swing.JButton StatisticsOfDates;
+    private javax.swing.JButton StatisticsOfSites;
+    private javax.swing.JButton StatisticsOfSpeed;
+    private javax.swing.JButton StatisticsOfVolume;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
