@@ -3,6 +3,7 @@ package StatisticsOfDownloading;
 
 import GeneralCommands.CommandComeBackHome;
 import GeneralCommands.CommandLogOut;
+import StatisticsOfDownloading.Commands.CommandComeBackToStatisticsHomePage;
 
 
 public class StatisticsOfSites extends javax.swing.JFrame {
@@ -86,8 +87,8 @@ public class StatisticsOfSites extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void ComeBackHomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ComeBackHomeActionPerformed
-        CommandComeBackHome comeBackHome = new CommandComeBackHome();
-        comeBackHome.comeBackHome();
+        CommandComeBackToStatisticsHomePage comeBackHome = new CommandComeBackToStatisticsHomePage();
+        comeBackHome.comeBackToStatisticsHomePage();
         this.dispose();
     }//GEN-LAST:event_ComeBackHomeActionPerformed
 
